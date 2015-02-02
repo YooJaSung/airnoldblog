@@ -1,0 +1,26 @@
+<form role="form">
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="write_email">
+    </div>
+
+    <!--<div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>-->
+
+    <div class="form-group">
+        <label for="category">Category</label><br>
+        <select id="category" ng-model="selectedcategory" ng-options="c for c in categories"></select>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter title" ng-model="title">
+    </div>
+    <text-angular ng-model="content_html"></text-angular>
+    <div class="write-btn-div">
+        <button type="button" class="btn btn-primary write-btn-write " ng-click="writebtn()">write</button>
+        <button type="button" class="btn btn-danger write-btn-cancel " ng-click="cancelbtn()">cancel</button>
+    </div>
+</form>

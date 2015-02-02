@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="airnold">
+
+<head>
+    <title>airnold blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jquery link using CDN. -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- custom airnold's blog-->
+    <link rel="stylesheet" href="/stylesheets/customblog.css">
+    <link rel="stylesheet" href="/stylesheets/wallop-slider.css">
+    <link rel="stylesheet" href="/stylesheets/wallop-slider--rotate.css">
+    <script src="/javascripts/customblog.js"></script>
+
+    <!-- angularjs file link -->
+
+    <script src="/angularjs/angularjslib/angular.min.js"></script>
+    <script src="/angularjs/angularjslib/angular-route.min.js"></script>
+    <script src="/angularjs/angularjslib/angular-sanitize.min.js"></script>
+    <script src="/angularjs/angularjslib/ui-bootstrap-tpls-0.12.0.min.js"></script>
+
+    <script src="/angularjs/app.js"></script>
+    <script src="/angularjs/controller/navController.js"></script>
+    <script src="/angularjs/controller/mainController.js"></script>
+    <script src="/angularjs/controller/developController.js"></script>
+    <script src="/angularjs/controller/guestbookController.js"></script>
+    <script src="/angularjs/controller/modalcontroller/telegramsendController.js"></script>
+    <script src="/angularjs/controller/modalcontroller/adminloginController.js"></script>
+    <script src="/angularjs/controller/writedevelopController.js"></script>
+    <script src="/angularjs/controller/developdetailController.js"></script>
+
+    <!-- service file link -->
+    <script src="/angularjs/service/developfac.js"></script>
+    <script src="/angularjs/service/loginfac.js"></script>
+    <script src="/angularjs/service/developwritefac.js"></script>
+
+    <!-- directive link -->
+    <script src="/angularjs/directive/imageSlider_directive.js"></script>
+    <script src="/angularjs/directive/repl_directive.js"></script>
+
+    <!-- common file link -->
+    <link rel="stylesheet" href="/angularjs/commonlib/font-awesome-4.2.0/css/font-awesome.min.css">
+    <script src="/angularjs/commonlib/textAngular.min.js"></script>
+    <script src="/angularjs/commonlib/textAngular-sanitize.min.js"></script>
+    <script src="/angularjs/commonlib/johayoClock/johayo-clock.min.js"></script>
+    <link rel="stylesheet" href="/angularjs/commonlib/johayoClock/clock.min.css"/>
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navController">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsed-navi">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="glyphicon glyphicon-arrow-down"></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a class="navbar-brand" href="#/">Airnold's Blog</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="collapsed-navi">
+
+            <!-- nav left view -->
+            <ul class="nav navbar-nav">
+                <li><a href="#/develop/javascript" class="nav-menu"> Develope </a>
+                </li>
+                <li><a href="#/guestbook" class="nav-menu"> Guest Book </a>
+                </li>
+            </ul>
+            <!-- nav left view -->
+
+            <!-- nav right view -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href class="yoojasung" tooltip-placement="{{tooltip_setting}}" tooltip-trigger="mouseenter"
+                       tooltip="send message" ng-click="sendtelegram()">YooJaSung</a>
+                </li>
+                <li>
+                    <!--<button type="button" class="btn btn-info">Search</button>-->
+                    <div class="yoojasung-img-div" tooltip-placement="bottom" tooltip-trigger="mouseenter"
+                         tooltip="{{tooltip_string}}" ng-click="adminlogin()">
+                    </div>
+                </li>
+            </ul>
+            <!-- nav right view -->
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div ng-view class="container ng-view-container">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h2 class="modal-title">login</h2>
+</div>
+<div class="modal-body">
+    <form role="form">
+        <div class="form-group">
+            <label for="loginid">Admin Id</label>
+            <input type="text" class="form-control" id="loginid" placeholder="Enter ID" ng-model = "id">
+        </div>
+        <div class="form-group">
+            <label for="loginpasswd">Password</label>
+            <input type="password" class="form-control" id="loginpasswd" placeholder="Password" ng-model ="passwd">
+        </div>
+    </form>
+
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="login()">OK</button>
+    <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+</div>

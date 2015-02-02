@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <h2 class="modal-title">Send message to Jasung's telegram</h2>
+</div>
+<div class="modal-body">
+
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label class="sr-only" for="writer">writer</label>
+            <input type="text" class="form-control" id="writer" placeholder="Enter name" ng-model="telegram_writer_name">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="writer_email">email</label>
+            <input type="text" class="form-control" id="writer_email" placeholder="Enter email" ng-model="telegram_writer_email">
+        </div>
+
+    </form>
+    <br>
+    <div class="form-group">
+        <textarea class="form-control" rows="5" style="resize:none" ng-model = "telegram_writer_content" ></textarea>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="send()">OK</button>
+    <button class="btn btn-danger" ng-click="cancel()">Cancel</button>
+</div>

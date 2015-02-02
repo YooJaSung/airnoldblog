@@ -1,0 +1,31 @@
+
+.wallop-slider {
+  width: 100%;
+}
+
+.wallop-slider__list {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.wallop-slider__item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.wallop-slider__item img {
+  display: block;
+  width: 90%;
+  height : 400px;
+  border-radius : 10px;
+}
+
+.wallop-slider__item--current {
+  display: block;
+  position: static;
+}
+

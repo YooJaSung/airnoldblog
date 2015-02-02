@@ -1,0 +1,19 @@
+<div style="height : 100px">
+    <i class="fa fa-pencil-square-o fa-3x" ng-click="toggle()"></i>
+
+
+    <div class="repl_input">
+            <div class="form-group">
+                <label class="sr-only" for="nickname" >nickname</label>
+                <input type="text" class="form-control"  id="nickname" placeholder="Enter nickname" ng-model="nickname" style="width:48%; display:inline;" >
+
+                <label class="sr-only" for="passwordforrepl">Password</label>
+                <input type="password" class="form-control" id="passwordforrepl" placeholder="Password" ng-model="password" style="width:48%; display:inline; margin-left:12px;">
+            </div>
+        <div>
+            <textarea placeholder="content" ng-model="content" rows="3" style="width:100%"></textarea>
+        </div>
+        <button type="button" class="btn btn-success" style="margin-top:10px;" ng-click="insertrepl()">등록</button>
+
+    </div>
+</div>
