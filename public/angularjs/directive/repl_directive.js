@@ -35,10 +35,61 @@ angular.module('airnold.directive')
     .directive('showreplDirective', function(){
         return{
             restrict : 'EA',
-            templateUrl : '',
-            controller : 'showreplController',
+            templateUrl : '/angularjs/views/directivetemplate/showrepl.html',
+
             scope : {
-                content : '='
+                content : '=replContent'
+            },
+            controller : function($scope, $element){
+                $scope.repl_contents = $scope.content;
+                $scope.status_flag = true;
+                $scope.btn_status = '수정';
+
+                var temp = $element.find('.edit_repl_input');
+                temp.hide();
+
+                $scope.toggle = function(flag){
+                    if(flag === 'edit'){
+                        // edit button
+                        $scope.status_flag = true;
+                        $scope.btn_status = '수정';
+                    }else{
+                        // delete button
+                        $scope.status_flag = false;
+                        $scope.btn_status = '삭제';
+                    }
+                    var temp = $element.find('.edit_repl_input');
+                    temp.slideToggle();
+                    $scope.nickname = "";
+                    $scope.password = "";
+                    $scope.content = "";
+                };
+
+
+                $scope.edit_repl = function(){
+
+                    // 1. check nickname & password
+                    // 2. nickname & password match
+                    if($scope.status_flag === true) {
+                        console.log('수정');
+                        // get update data
+
+                        // update http request
+
+                    }else{
+                        console.log('삭제');
+
+                        // delete http request
+
+                    }
+                    // 2. nickname & password not match
+                    // show some message and redirect previous page
+
+
+                };
+
+
+
             },
             link : function(scope, element, attribute, controller){}
         }

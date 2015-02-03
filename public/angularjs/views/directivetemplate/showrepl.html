@@ -1,0 +1,22 @@
+<h4>{{repl_contents}}</h4>
+<div style="margin-top:15px;">
+    <i class="fa fa-pencil-square-o fa-2x" ng-click="toggle('edit')"></i>
+    <i class="fa fa-trash-o fa-2x" ng-click="toggle('delete')"></i>
+</div>
+
+<div style="margin-top:10px;" class="edit_repl_input">
+    <div class="form-group">
+        <label class="sr-only" for="nickname">nickname</label>
+        <input type="text" class="form-control" id="nickname" placeholder="Enter nickname" ng-model="nickname"
+               style="width:48%; display:inline;">
+
+        <label class="sr-only" for="passwordforrepl">Password</label>
+        <input type="password" class="form-control" id="passwordforrepl" placeholder="Password" ng-model="password" style="width:48%; display:inline; margin-left:12px;">
+        <div style="margin-top : 10px; margin-bottom : 10px;" ng-if="status_flag">
+            <textarea placeholder="content" ng-model="content" rows="3" style="width:100%"></textarea>
+        </div>
+        <button type="button" class="btn btn-success" style="margin-top:10px;" ng-click="edit_repl()">{{btn_status}}</button>
+    </div>
+</div>
+
+<hr>

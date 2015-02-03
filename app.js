@@ -35,7 +35,6 @@ app.use(function(req, res, next) {
     err.status = 404;
     next(err);
 });
-
 // error handlers
 
 // development error handler
@@ -60,10 +59,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
-
 http.createServer(app).listen(3000,function(){
     console.log(' server running ');
 });
-
 
 module.exports = app;
