@@ -13,17 +13,33 @@ angular.module('airnold', [
             })
             .when('/develop/:category', {
                 templateUrl: '/angularjs/views/develop.html',
-                controller: 'developController'
+                controller: 'developController',
                 // get all develop content in category (using http request)
+                resolve : {
+
+                }
             })
             .when('/develop/:category/:num', {
-                templateUrl: '/angularjs/views/developdetail.html',
-                controller: 'developdetailController'
+                templateUrl: '/angularjs/views/detailview.html',
+                controller: 'developdetailController',
                 // get content of num category (using http request)
+                resolve : {
+
+                }
             })
             .when('/guestbook', {
                 templateUrl: '/angularjs/views/guestbook.html',
-                controller: 'guestbookController'
+                controller: 'guestbookController',
+                resolve : {
+
+                }
+            })
+            .when('/guestbook/:guestbooknum', {
+                templateUrl: '/angularjs/views/detailview.html',
+                controller: 'guestbookdetailController',
+                resolve : {
+
+                }
             })
             .when('/write',{
                 templateUrl : '/angularjs/views/writedevelop.html',

@@ -20,7 +20,7 @@
         margin : 10px;
         word-break:break-all;
     }
-    .developdetail, .reply{
+    .detailview, .reply{
         width : 95%;
         border : 2px solid #006699;
         border-radius : 10px;
@@ -65,7 +65,7 @@
         height : 350px;
         word-break:break-all;
     }
-    .developdetail{
+    .detailview{
         width : 55%;
         border : 2px solid #006699;
         border-radius : 10px;
