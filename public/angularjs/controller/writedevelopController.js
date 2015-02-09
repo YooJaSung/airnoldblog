@@ -3,7 +3,7 @@
  */
 
 angular.module('airnold.controller')
-    .controller('writedevelopController', ['$scope','$routeParams','$insert_develop',
+    .controller('writedevelopController', ['$scope','$routeParams','$insert_develop','tag_remove',
         function($scope, $routeParams, $insert_develop){
         $scope.categories = [
             'javascript',
@@ -26,7 +26,6 @@ angular.module('airnold.controller')
             sending_data.title = $scope.title;
             sending_data.contents = $scope.content_html;
             $insert_develop.insert_develop_content(sending_data);
-
         };
         $scope.cancelbtn = function(){
 

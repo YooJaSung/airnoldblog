@@ -3,9 +3,9 @@
  */
 
 angular.module('airnold.service')
-    .factory('$insert_develop',['$http','$window',function($http, $window){
-        return{
-            insert_develop_content : function(data){
+    .factory('$insert_develop', ['$http', '$window', function ($http, $window) {
+        return {
+            insert_develop_content: function (data) {
                 /*$http({
                  url: 'http://121.184.187.5:3000/place_search',
                  method: 'POST',

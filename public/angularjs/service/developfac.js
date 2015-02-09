@@ -46,4 +46,15 @@ angular.module('airnold.service')
         };
 
         return develop_obj;
+    }])
+    .factory('tag_remove', [function () {
+        return {
+            removeHtmlTag: function (html) {
+                var pattern = /<[^>]+>/g;
+
+                var tag_removed_text = html.replace(pattern, '');
+
+                return tag_removed_text;
+            }
+        }
     }]);
