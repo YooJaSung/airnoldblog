@@ -40,5 +40,4 @@ angular.module('airnold.controller')
            /* $scope.$on('$routeChangeSuccess', function(next, current){
                 // get or post http request in this method
             });*/
-
     }]);
