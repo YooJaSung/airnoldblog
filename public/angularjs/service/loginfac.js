@@ -41,6 +41,7 @@ angular.module('airnold.service')
         };
 
         return admin_login;
+        
     }]);
 
 function comparelogindata(modal_data , templogin_data){

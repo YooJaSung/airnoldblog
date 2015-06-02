@@ -60,7 +60,7 @@ app.use(function(err, req, res, next) {
 });
 
 http.createServer(app).listen(3000,function(){
-    console.log(' server running ');
+    console.log(' server running at 3000 port');
 });
 
 module.exports = app;

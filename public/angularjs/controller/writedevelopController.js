@@ -11,7 +11,6 @@ angular.module('airnold.controller')
             'angularjs'
         ];
 
-
         $scope.write_email = undefined;
         $scope.selectedcategory = $scope.categories[0];
         $scope.title = undefined;
@@ -27,6 +26,7 @@ angular.module('airnold.controller')
             sending_data.contents = $scope.content_html;
             $insert_develop.insert_develop_content(sending_data);
         };
+
         $scope.cancelbtn = function(){
 
         };
@@ -36,4 +36,5 @@ angular.module('airnold.controller')
         // 4. show toast for success or error
 
         // 5. redirect to previous path
+
     }]);
