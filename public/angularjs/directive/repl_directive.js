@@ -6,13 +6,14 @@ angular.module('airnold.directive')
         return {
             restrict: 'EA',
             templateUrl : '/angularjs/views/directivetemplate/inputrepl.html',
-            /*controller : 'inputreplController',*/
             controller : function($scope, $element,develop_manipulate){
+
                 $scope.nickname = undefined;
                 $scope.password = undefined;
                 $scope.content = undefined;
 
                 var temp = $element.find('.repl_input');
+
                 temp.hide();
 
                 $scope.toggle = function(){
@@ -24,6 +25,8 @@ angular.module('airnold.directive')
                 };
 
                 $scope.insertrepl = function(){
+
+                    console.log('등록');
                     //make insert_repl service
                     // develop_manipulate.get_current_contentnum
                 }
@@ -41,6 +44,7 @@ angular.module('airnold.directive')
                 content : '=replContent'
             },
             controller : function($scope, $element){
+
                 $scope.repl_contents = $scope.content;
                 $scope.status_flag = true;
                 $scope.btn_status = '수정';
@@ -50,6 +54,7 @@ angular.module('airnold.directive')
 
                 $scope.toggle = function(flag){
                     if(flag === 'edit'){
+
                         // edit button
                         $scope.status_flag = true;
                         $scope.btn_status = '수정';
